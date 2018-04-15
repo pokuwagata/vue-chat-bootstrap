@@ -1,57 +1,54 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://github.com/vuejs/vue-cli/tree/dev/docs" target="_blank">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org/en/essentials/getting-started.html" target="_blank">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org/en/intro.html" target="_blank">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org/en" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div>
+    <div class="navbar sticky-top bg-dark">
+      <span class="navbar-brand text-white">Chat</span>
+    </div>
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-6">
+          <div class="text-left">太郎</div>
+          <div class="card">
+            <div class="card-body">
+              <p>Change text alignment, transform, style, weight, and color with our text utilities and color utilities.</p>
+            </div>
+          </div>
+          <div class="text-left">9:00</div>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-6">
+          <div class="text-right">花子</div>
+          <div class="card">
+            <div class="card-body">
+              <p>Change text alignment, transform, style, weight, and color with our text utilities and color utilities.</p>
+            </div>
+          </div>
+          <div class="text-right">10:00</div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 fixed-bottom bg-dark">
+      <form>
+        <div class="container my-2">
+          <div class="form-group row justify-content-center">
+            <div class="col-10">
+              <input type="text" placeholder="input" class="form-control" id="postContents">
+            </div>
+            <div class="col-2 d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: String
   }
-}
+};
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
