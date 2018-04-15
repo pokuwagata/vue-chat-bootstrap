@@ -32,10 +32,10 @@
         <div class="container my-2">
           <div class="form-group row justify-content-center">
             <div class="col-10">
-              <input type="text" placeholder="input" class="form-control" id="postContents">
+              <input type="text" placeholder="input" class="form-control" id="postContents" v-model="newMessage">
             </div>
             <div class="col-2 d-flex justify-content-center">
-              <button type="submit" class="btn btn-primary">Send</button>
+              <button class="btn btn-primary" @click="addMessage('test')">Send</button>
             </div>
           </div>
         </div>
@@ -49,6 +49,20 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  data: {
+    messages: [],
+    newMessage: ""
+  },
+  methods: {
+    addMessage: function() {
+      this.messages.push({
+        id: "",
+        Name: "",
+        message: "test",
+        timeStamp: ""
+      });
+    }
   }
 };
 </script>
