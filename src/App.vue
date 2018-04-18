@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header/>
+    <Main/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+// import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
+import Main from "./components/Main.vue";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    Header,
+    Main
   }
-}
+};
 </script>

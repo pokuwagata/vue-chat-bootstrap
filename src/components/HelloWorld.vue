@@ -50,9 +50,11 @@ export default {
   props: {
     msg: String
   },
-  data: {
-    messages: [],
-    newMessage: ""
+  data: function() {
+    return {
+      messages: [],
+      newMessage: ""
+    };
   },
   methods: {
     addMessage: function() {
